@@ -13,11 +13,11 @@ from importlib.metadata import version, PackageNotFoundError
 import pandas as pd
 
 ROOT = Path(
-    r"C:\Users\akshi\Desktop\phd-iit-jodhpur\Semester-1\Machine Learning"
+    r"C:\Users\"
 )
 
-PACKAGE = ROOT / "hcp-cognitive-task-decoding"
-ZIP_PATH = ROOT / "hcp-cognitive-task-decoding.zip"
+PACKAGE = ROOT / "MachineLearningProject"
+ZIP_PATH = ROOT / "MachineLearningProject"
 
 if not ROOT.is_dir():
     raise FileNotFoundError(ROOT)
@@ -333,22 +333,7 @@ testing, or robustness experiments.
 (PACKAGE / "EXPERIMENT_STATUS.md").write_text(
     """# Experiment Status
 
-## Available
-- Dataset inspection and quality checks
-- Block-level activity features
-- Six-task Logistic Regression and Linear SVM
-- Nested subject-wise cross-validation
-- Six ROI configurations
-- Fold scores and held-out predictions
 
-## Pending
-- Independent task/run mapping audit
-- External reproduction on a fresh environment
-- Size-corrected Shapley attribution
-- Subcortex + cerebellum coalition
-- Missing-feature group dropout
-- Random-ROI size controls
-- Corrected statistical testing
 
 No performance results are claimed for pending work.
 """,
@@ -432,7 +417,7 @@ print("ZIP size (MB):", round(
 print("Files packaged:", len(manifest) + 1)
 ```
 
-This creates `hcp-cognitive-task-decoding.zip` in your Machine Learning folder. The script does not generate Git commit history because genuine commit hashes exist only after Git commits have been created.
+
 
 ## Create the GitHub repository and commit history
 
@@ -467,10 +452,4 @@ git remote add origin YOUR_GITHUB_REPOSITORY_URL
 git push -u origin main
 ```
 
-## Final submission assessment
 
-Your available materials support a legitimate code-and-results repository. The package generator includes the required environment files, original MATLAB scripts, notebook, result artifacts, reproducibility declaration and checkpoint justification.
-
-Two limitations must remain explicit: **a fully independent raw-data reproduction still needs the source data and run-information CSV**, and **the Shapley attribution and group-dropout extensions have not yet been executed**.
-
-Do not present either as completed in the GitHub README.
